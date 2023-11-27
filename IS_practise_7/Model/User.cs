@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.Model
 {
-    //РОТ ЕГО ЕБАТЬ
     public class User
     {
         public string Login { get; private set; }
