@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.ViewModel
 {
-    internal class EnterViewModel
+    internal class EnterViewModel : BaseViewModel
     {
+
     }
 }
