@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="View\Fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <None Remove="View\Svg\exit.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
     <Resource Include="View\Fonts\Ubuntu\Ubuntu-Bold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="View\Svg\exit.svg" />
   </ItemGroup>
 
 </Project>

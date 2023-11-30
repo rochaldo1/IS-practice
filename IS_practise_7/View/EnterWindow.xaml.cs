@@ -23,5 +23,13 @@ namespace IS_practise_7.View
         {
             InitializeComponent();
         }
+
+        private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
+        private void Navbar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+              if (e.ChangedButton == MouseButton.Left) { this.DragMove(); }
+        }
+
+        
     }
 }
