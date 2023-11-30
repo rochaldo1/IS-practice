@@ -6,25 +6,40 @@
         xmlns:local="clr-namespace:IS_practise_7.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="EnterWindow" Height="450" Width="300">
+        Height="450" Width="300" ResizeMode="NoResize" IsEnabled="False" WindowStyle="None">
+    
     <Window.DataContext>
         <local:EnterViewModel></local:EnterViewModel>
     </Window.DataContext>
+    
     <Window.Resources>
         <ResourceDictionary Source="/IS_practise_7;component/View/ViewStyles/EnterStyles.xaml"></ResourceDictionary>
     </Window.Resources>
-    <Grid Style="{StaticResource StyleForGrid_Enter}">
+    
+    <Grid Style="{StaticResource Grid_Background}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="90"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="70"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="260"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
+        
+        
+        <Grid x:Name="Title" Grid.Row="1">
+            <TextBlock x:Name="Grid_Title" Style="{StaticResource TextBlock_EntTitle}">File Manager IS</TextBlock>
+        </Grid>
 
-        <TextBlock Style="{StaticResource StyleForTextBlock_EntTitle}"
-                   Grid.Row="0">File Manager IS
-        </TextBlock>
+        <Grid x:Name="Form" Grid.Row="2" Style="{StaticResource Grid_Form}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="90"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="Form_Text_Log" Grid.Row="0" Style="{StaticResource Form_Text}">Login</TextBlock>
+            <TextBox x:Name="Form_Input_Login" Grid.Row="1" Style="{StaticResource Form_Input_Login}"></TextBox>
+            <TextBlock x:Name="Form_Text_Pass" Grid.Row="2" Style="{StaticResource Form_Text}">Password</TextBlock>
+            <TextBox x:Name="Form_Input_Password" Grid.Row="3" Style="{StaticResource Form_Input_Password}"></TextBox>
+        </Grid>
     </Grid>
 </Window>

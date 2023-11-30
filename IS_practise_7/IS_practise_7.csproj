@@ -9,7 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Fonts\Ubuntu\Ubuntu-Bold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DataManager\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Fonts\Ubuntu\Ubuntu-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
