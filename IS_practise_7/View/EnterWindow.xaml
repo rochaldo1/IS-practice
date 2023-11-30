@@ -23,7 +23,10 @@
             <RowDefinition Height="260"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
+        <Grid x:Name="Navbar" Grid.Row="0">
+            
+        </Grid>
         
         <Grid x:Name="Title" Grid.Row="1">
             <TextBlock x:Name="Grid_Title" Style="{StaticResource TextBlock_EntTitle}">File Manager IS</TextBlock>
@@ -32,9 +35,9 @@
         <Grid x:Name="Form" Grid.Row="2" Style="{StaticResource Grid_Form}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock x:Name="Form_Text_Log" Grid.Row="0" Style="{StaticResource Form_Text}">Login</TextBlock>
             <TextBox x:Name="Form_Input_Login" Grid.Row="1" Style="{StaticResource Form_Input_Login}"></TextBox>
