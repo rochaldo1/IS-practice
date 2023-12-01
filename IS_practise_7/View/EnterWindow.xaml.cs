@@ -22,14 +22,11 @@ namespace IS_practise_7.View
         public EnterWindow()
         {
             InitializeComponent();
+            MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
         }
 
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
-        private void Navbar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-              if (e.ChangedButton == MouseButton.Left) { this.DragMove(); }
-        }
 
-        
+        private void Navbar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
     }
 }

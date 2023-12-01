@@ -21,7 +21,6 @@
     <Resource Include="View\Fonts\Ubuntu\Ubuntu-Bold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="View\Svg\exit.svg" />
   </ItemGroup>
 
 </Project>

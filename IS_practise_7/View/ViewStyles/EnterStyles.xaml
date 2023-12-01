@@ -16,6 +16,11 @@
     </Style>
     
     <!--Стили навбара-->
+    <Style x:Key="Navbar" TargetType="Grid">
+        <Setter Property="Width" Value="300"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
+    </Style>
+    
     <Style x:Key="Exit_Button" TargetType="{x:Type Path}">
         <Setter Property="Fill" Value="Black"></Setter>
         <Setter Property="Margin" Value="265 0 0 0"></Setter>
