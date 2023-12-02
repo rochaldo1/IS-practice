@@ -6,30 +6,31 @@
         xmlns:local="clr-namespace:IS_practise_7.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Height="450" Width="300" ResizeMode="NoResize" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" AutomationProperties.IsRowHeader="True" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    
+        Height="370" Width="300" ResizeMode="NoResize" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" AutomationProperties.IsRowHeader="True" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
     <Window.DataContext>
         <local:EnterViewModel></local:EnterViewModel>
     </Window.DataContext>
-    
+
     <Window.Resources>
         <ResourceDictionary Source="/IS_practise_7;component/View/ViewStyles/EnterStyles.xaml"></ResourceDictionary>
     </Window.Resources>
-    
+
     <Grid Style="{StaticResource Grid_Background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="90"></RowDefinition>
-            <RowDefinition Height="260"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="Navbar" MouseLeftButtonDown="Navbar_MouseLeftButtonDown" Grid.Row="0"  Style="{StaticResource ResourceKey=Navbar}"> <!--разобраться с навбар и ехит-->
+        <Grid x:Name="Navbar" MouseLeftButtonDown="Navbar_MouseLeftButtonDown" Grid.Row="0"  Style="{StaticResource ResourceKey=Navbar}">
             <StackPanel Orientation="Horizontal">
+                <Image x:Name="RollUp" MouseDown="RollUp_MouseDown" Source="/IS_practise_7;component/View/SvgAndPng/ret.png" Style="{StaticResource ResourceKey=RollUp_Button}"/>
                 <Path x:Name="Exit" MouseDown="Exit_MouseDown" Style="{StaticResource ResourceKey=Exit_Button}" Data="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" Stretch="Fill" Width="25" Height="25"/>
             </StackPanel>
         </Grid>
-        
+
         <Grid x:Name="Title" Grid.Row="1">
             <Border x:Name="Title_Border" Style="{StaticResource Title_Border}">
                 <TextBlock x:Name="Title_Text" Style="{StaticResource Title_Text}">File Manager IS</TextBlock>
@@ -39,14 +40,30 @@
         <Grid x:Name="Form" Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="Form_Text_Log" Grid.Row="0" Style="{StaticResource Form_Text}">Login</TextBlock>
-            <TextBox x:Name="Form_Input_Login" Grid.Row="1" Style="{StaticResource Form_Input_Login}"></TextBox>
-            <TextBlock x:Name="Form_Text_Pass" Grid.Row="2" Style="{StaticResource Form_Text}">Password</TextBlock>
-            <TextBox x:Name="Form_Input_Password" Grid.Row="3" Style="{StaticResource Form_Input_Password}"></TextBox>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"></ColumnDefinition>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="Form_Text_Log" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource Form_Text}">Login:</TextBlock>
+            <TextBox x:Name="Form_Input_Login" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource Form_Input_Login}"></TextBox>
+            <TextBlock x:Name="Form_Text_Pass" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource Form_Text}">Password:</TextBlock>
+            <PasswordBox x:Name="Form_Input_Password_PB" Grid.Row="3" Grid.Column="0" Style="{StaticResource Form_Input_Password_PB}"/>
+            <TextBox x:Name="Form_Input_Password_TB" Grid.Row="3" Grid.Column="0" Visibility="Hidden" Style="{StaticResource Form_Input_Password_TB}"></TextBox>
+            <StackPanel Grid.Row="3" Grid.Column="1">
+                <Path x:Name="Watch_Password" Style="{StaticResource ResourceKey=Watch_Password}" MouseDown="Watch_Password_MouseDown" Data="M63.714,30.516C63.347,29.594,54.448,8,31.999,8S0.651,29.594,0.284,30.516 c-0.379,0.953-0.379,2.016,0,2.969C0.651,34.406,9.55,56,31.999,56s31.348-21.594,31.715-22.516C64.093,32.531,64.093,31.469,63.714,30.516z M31.999,40c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.417,40,31.999,40z" Height="35" Stretch="Fill" Width="45"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid x:Name="Form_Submit" Grid.Row="3">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="Button_Submit" Style="{StaticResource Button_Submit}">Войти</Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

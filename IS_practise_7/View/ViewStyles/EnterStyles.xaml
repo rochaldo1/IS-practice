@@ -23,10 +23,15 @@
     
     <Style x:Key="Exit_Button" TargetType="{x:Type Path}">
         <Setter Property="Fill" Value="Black"></Setter>
-        <Setter Property="Margin" Value="265 0 0 0"></Setter>
+        <Setter Property="Margin" Value="10 0 0 0"></Setter>
         <Setter Property="VerticalAlignment" Value="Center"></Setter>
     </Style>
-    
+
+    <Style x:Key="RollUp_Button" TargetType="Image">
+        <Setter Property="Width" Value="25"></Setter>
+        <Setter Property="Margin" Value="230 0 0 0"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+    </Style>
     <!--Стили надписи верхней-->
     <Style x:Key="Title_Border" TargetType="{x:Type Border}">
         <Setter Property="BorderThickness" Value="0 2 0 2"></Setter>
@@ -54,16 +59,73 @@
         <Setter Property="FontWeight" Value="Bold"></Setter>
         <Setter Property="FontStyle" Value="Italic"></Setter>
         <Setter Property="Padding" Value="5"></Setter>
-        <Setter Property="Margin" Value="10,0,140,10"></Setter>
+        <Setter Property="Margin" Value="10,0,140,0"></Setter>
         <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
     </Style>
-
+ 
     <Style x:Key="Form_Input_Login" TargetType="{x:Type TextBox}">
-        
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="280"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="0 0 0 2"></Setter>
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="FontStyle" Value="Italic"></Setter>
     </Style>
 
-    <Style x:Key="Form_Input_Password" TargetType="{x:Type TextBox}">
-        
+    <Style x:Key="Form_Input_Password_TB" TargetType="{x:Type TextBox}">
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="220"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="0 0 0 2"></Setter>
+        <Setter Property="Background" Value="Transparent"></Setter>
     </Style>
-        
+
+    <Style x:Key="Form_Input_Password_PB" TargetType="{x:Type PasswordBox}">
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="220"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="0 0 0 2"></Setter>
+        <Setter Property="Background" Value="Transparent"></Setter>
+    </Style>
+
+    <Style x:Key="Watch_Password" TargetType="{x:Type Path}">
+        <Setter Property="Fill" Value="Black"></Setter>
+    </Style>
+    
+    <!--Стили кнопки-->
+
+    <Style x:Key="Border_Button" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="3"></Setter>
+        <Setter Property="CornerRadius" Value="20"></Setter>
+    </Style>
+
+    <Style x:Key="Button_Submit" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="100"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
+        <Setter Property="Margin" Value="0 8 0 0"></Setter>
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="FontStyle" Value="Italic"></Setter>
+        <Setter Property="Foreground" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border_Button" Style="{StaticResource Border_Button}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border_Button" Property="BorderBrush" Value="Black" />
+                            <Setter Property="Foreground" Value="White"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

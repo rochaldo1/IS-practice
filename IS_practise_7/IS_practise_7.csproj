@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="View\Fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <None Remove="View\SvgAndPng\eye.png" />
+    <None Remove="View\SvgAndPng\ret.png" />
     <None Remove="View\Svg\exit.svg" />
   </ItemGroup>
 
@@ -21,6 +23,7 @@
     <Resource Include="View\Fonts\Ubuntu\Ubuntu-Bold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="View\SvgAndPng\ret.png" />
   </ItemGroup>
 
 </Project>

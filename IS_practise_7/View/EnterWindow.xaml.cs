@@ -19,14 +19,42 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class EnterWindow : Window
     {
+        
         public EnterWindow()
         {
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
+           
         }
 
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
 
         private void Navbar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
+
+        int CountClick = 0; //Для показа пароля!
+        private void Watch_Password_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if ((e.ChangedButton == MouseButton.Left) && ((CountClick % 2) == 0))
+            {
+                CountClick += 1;
+                Form_Input_Password_TB.Text = Form_Input_Password_PB.Password;
+                Form_Input_Password_TB.Visibility = Visibility.Visible;
+                Form_Input_Password_PB.Visibility = Visibility.Hidden;
+                Form_Input_Password_TB.Select(Form_Input_Password_TB.Text.Length, 0);
+
+            }
+            else
+            {
+                CountClick += 1;
+                Form_Input_Password_PB.Password = Form_Input_Password_TB.Text;
+                Form_Input_Password_PB.Visibility = Visibility.Visible;
+                Form_Input_Password_TB.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState=WindowState.Minimized;
+        }
     }
 }
