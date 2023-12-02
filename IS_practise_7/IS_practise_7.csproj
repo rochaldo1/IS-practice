@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataManager\Files\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="View\Fonts\Ubuntu\Ubuntu-Bold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

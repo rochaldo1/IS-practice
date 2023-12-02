@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.ViewModel
 {
-    internal class BaseViewModel : INotifyPropertyChanged
+    internal class BaseVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

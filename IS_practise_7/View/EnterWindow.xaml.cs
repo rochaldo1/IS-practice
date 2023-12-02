@@ -60,7 +60,7 @@ namespace IS_practise_7.View
 
         private void Form_Input_Password_PB_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            EnterViewModel enterViewModel = new EnterViewModel();
+            EnterVM enterViewModel = new EnterVM();
             enterViewModel.Password = Form_Input_Password_PB.Password;
         }
     }

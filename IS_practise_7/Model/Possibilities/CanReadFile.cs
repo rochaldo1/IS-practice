@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.Model.Possibilities
 {
-    public class CanReadTextFile : IReadTextFile
+    public class CanReadFile : IReadTextFile
     {
-        
+
         public string ReadFile(string path)
         {
             using var stream = File.Open(path, FileMode.Open);
@@ -20,6 +20,6 @@ namespace IS_practise_7.Model.Possibilities
         }
         //public async Task ReadTextFileAsync() { return await Task.Run(ReadFile(string path); }
 
-       
+
     }
 }

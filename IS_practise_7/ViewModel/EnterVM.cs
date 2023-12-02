@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.ViewModel
 {
-    internal class EnterViewModel : BaseViewModel
+    internal class EnterVM : BaseVM
     {
         string password = string.Empty;
         string login = string.Empty;
-        public string Login {
+        public string Login
+        {
             get => login;
             set
             {
@@ -24,13 +25,11 @@ namespace IS_practise_7.ViewModel
         public string Password
         {
             get => password;
-            set { 
+            set
+            {
                 password = value;
                 OnPropertyChanged();
-            } 
+            }
         }
-
-        
-
     }
 }

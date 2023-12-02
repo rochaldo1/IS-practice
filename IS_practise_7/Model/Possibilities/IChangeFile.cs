@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS_practise_7.Model
+namespace IS_practise_7.Model.Possibilities
 {
-    class UsersList
+    public interface IChangeFile
     {
-        public List<User> users = new();
+        string ChangeFile(string path);
     }
 }
