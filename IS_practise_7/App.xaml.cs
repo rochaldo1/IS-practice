@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using IS_practise_7.DataManager.Users;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -9,6 +10,8 @@ namespace IS_practise_7
     /// </summary>
     public partial class App : Application
     {
+       
+
     }
 
 }

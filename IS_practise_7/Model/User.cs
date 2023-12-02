@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.Model
 {
-    public class User
+    public class User : IEntety
     {
-        public string Login { get; private set; }
-        public string Password { get; private set; }
-        public Guid Id { get; private set; }
-        
-        public User()
+        public Guid Id { get; }
+
+        public string Login { get;  }
+
+        public string Password { get; }
+
+        public User(Guid Id, string Login, string Password)
         {
-            
+            this.Id = Id;
+            this.Login = Login;
+            this.Password = Password;
         }
     }
 }

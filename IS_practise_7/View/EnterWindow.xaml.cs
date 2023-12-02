@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IS_practise_7.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,6 +56,12 @@ namespace IS_practise_7.View
         private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.WindowState=WindowState.Minimized;
+        }
+
+        private void Form_Input_Password_PB_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            EnterViewModel enterViewModel = new EnterViewModel();
+            enterViewModel.Password = Form_Input_Password_PB.Password;
         }
     }
 }

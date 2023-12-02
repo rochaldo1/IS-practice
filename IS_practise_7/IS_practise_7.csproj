@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataManager\" />
+    <Folder Include="DataManager\Files\" />
   </ItemGroup>
 
   <ItemGroup>
