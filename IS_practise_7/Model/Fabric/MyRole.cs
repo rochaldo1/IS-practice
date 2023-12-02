@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IS_practise_7.Model.Possibilities;
 
-namespace TRYMODEL.Model.Fabric
+namespace IS_practise_7.Model.Fabric
 {
     internal static class MyRole 
     {

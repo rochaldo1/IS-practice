@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TRYMODEL.Model.Fabric;
-using TRYMODEL.Model.ForFabrics;
+using IS_practise_7.Model.Fabric;
+using IS_practise_7.Model.ForFabrics;
 
 namespace IS_practise_7.Model
 {
