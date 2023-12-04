@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IS_practise_7.Model.ForFabrics;
+using TRYMODEL.Model.ForFabrics;
 
-namespace IS_practise_7.Model.Fabric
+namespace TRYMODEL.Model.Fabric
 {
     internal abstract class MyRoleFabric
     {

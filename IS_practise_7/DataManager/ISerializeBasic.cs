@@ -11,7 +11,7 @@ namespace IS_practise_7.DataManager
     public interface ISerializeBasic<T> where T : IEntety
     {
         bool Add(T obj);
-        bool Remove(T obj);
+        bool Delete(T obj);
         bool Update(T obj);
 
         bool Save();

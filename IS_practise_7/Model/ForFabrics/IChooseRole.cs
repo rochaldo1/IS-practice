@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS_practise_7.Model.ForFabrics
+namespace TRYMODEL.Model.ForFabrics
 {
     public interface IChooseRole : IReadTextFile, IChangeFile
     {

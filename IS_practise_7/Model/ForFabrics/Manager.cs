@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS_practise_7.Model.ForFabrics
+namespace TRYMODEL.Model.ForFabrics
 {
     public class Manager : IChooseRole
     {
@@ -18,9 +18,9 @@ namespace IS_practise_7.Model.ForFabrics
             _changeFile = changeFile;
         }
 
-        public string ChangeFile(string path)
+        public string ChangeFile(string path, string text)
         {
-            throw new NotImplementedException();
+            return _changeFile.ChangeFile(path, text);
         }
 
         public string ReadFile(string path)
