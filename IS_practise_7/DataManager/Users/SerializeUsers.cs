@@ -79,8 +79,7 @@ namespace IS_practise_7.DataManager.Users
             using var reader = new StreamReader(stream);
             string parseJson = reader.ReadToEnd();
             if (parseJson == null) return false;
-            //_users = JsonSerializer.Deserialize<List<User>>(parseJson);
-            List<User> list = JsonSerializer.Deserialize<List<User>>(parseJson);
+            _users = JsonSerializer.Deserialize<List<User>>(parseJson);
             return true;
         }
 

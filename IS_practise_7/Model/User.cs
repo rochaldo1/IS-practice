@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TRYMODEL.Model.Fabric;
-using TRYMODEL.Model.ForFabrics;
+using IS_practise_7.Model.Fabric;
+using IS_practise_7.Model.ForFabrics;
 
 namespace IS_practise_7.Model
 {
@@ -14,35 +14,38 @@ namespace IS_practise_7.Model
     {
         public Guid Id { get; }
 
-        public string Login { get;  }
+        public string Login { get; }
 
         public string Password { get; }
 
-        public IChooseRole role { get; }
+        public int Role_Id { get; set; }
 
-        public List<string> routesToRead { get; }
+        private IChooseRole Role { get; }
 
-        public List<string> routesToChange { get; }
+        public List<string> RoutesToRead { get; }
 
-        public User(Guid Id, string Login, string Password, int role, List<string> routesToRead,List<string> routesToChange)
+        public List<string> RoutesToChange { get; }
+
+        public User(Guid Id, string Login, string Password, int Role_Id, List<string> RoutesToRead, List<string> RoutesToChange)
         {
-            MyRoleFabric fabric = MyRole.GetMyRole(role);
             this.Id = Id;
             this.Login = Login;
             this.Password = Password;
-            this.role = fabric.GetRole();
-            this.routesToRead = routesToRead;
-            this.routesToChange = routesToChange;
+            this.Role_Id = Role_Id;
+            MyRoleFabric fabric = MyRole.GetMyRole(this.Role_Id);
+            this.Role = fabric.GetRole();
+            this.RoutesToRead = RoutesToRead;
+            this.RoutesToChange = RoutesToChange;
         }
 
         public string ReadFile(string path)
         {
-            return role.ReadFile(path);
+            return Role.ReadFile(path);
         }
 
         public string ChangeFile(string path, string text)
         {
-            return role.ChangeFile(path, text);
+            return Role.ChangeFile(path, text);
         }
     }
 }

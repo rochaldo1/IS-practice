@@ -5,9 +5,9 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using TRYMODEL.Model.ForFabrics;
+using IS_practise_7.Model.ForFabrics;
 
-namespace TRYMODEL.Model.Fabric
+namespace IS_practise_7.Model.Fabric
 {
     internal class ManagerFabric : MyRoleFabric
     {
