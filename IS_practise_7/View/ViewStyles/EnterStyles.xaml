@@ -32,6 +32,7 @@
         <Setter Property="Margin" Value="230 0 0 0"></Setter>
         <Setter Property="Height" Value="25"></Setter>
     </Style>
+    
     <!--Стили надписи верхней-->
     <Style x:Key="Title_Border" TargetType="{x:Type Border}">
         <Setter Property="BorderThickness" Value="0 2 0 2"></Setter>

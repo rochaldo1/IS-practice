@@ -21,6 +21,10 @@
         <Setter Property="Height" Value="40"></Setter>
     </Style>
 
+    <Style x:Key="Navbar_Panel" TargetType="StackPanel">
+        <Setter Property="Margin" Value="250 0 -250 0"></Setter>
+    </Style>
+
     <Style x:Key="Exit_Button" TargetType="{x:Type Path}">
         <Setter Property="Fill" Value="Black"></Setter>
         <Setter Property="Margin" Value="10 0 0 0"></Setter>
@@ -32,5 +36,10 @@
         <Setter Property="Margin" Value="230 0 0 0"></Setter>
         <Setter Property="Height" Value="25"></Setter>
     </Style>
-
+    
+    <!--Стили статического текста-->
+    <Style x:Key="Static_Text_Style" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    </Style>
 </ResourceDictionary>

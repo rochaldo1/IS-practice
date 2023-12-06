@@ -22,6 +22,15 @@ namespace IS_practise_7.View
         public MainWindow()
         {
             InitializeComponent();
+            MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
         }
+
+        private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
+        private void Navbar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
     }
 }

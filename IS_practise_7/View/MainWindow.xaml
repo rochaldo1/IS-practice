@@ -16,11 +16,132 @@
             <RowDefinition Height="300"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
+        
+        
         <Grid x:Name="Navbar" MouseLeftButtonDown="Navbar_MouseLeftButtonDown" Grid.Row="0"  Style="{StaticResource ResourceKey=Navbar}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource ResourceKey=Navbar_Panel}">
                 <Image x:Name="RollUp" MouseDown="RollUp_MouseDown" Source="/IS_practise_7;component/View/SvgAndPng/ret.png" Style="{StaticResource ResourceKey=RollUp_Button}"/>
                 <Path x:Name="Exit" MouseDown="Exit_MouseDown" Style="{StaticResource ResourceKey=Exit_Button}" Data="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" Stretch="Fill" Width="25" Height="25"/>
             </StackPanel>
         </Grid>
+
+        <Grid x:Name="Profile_Bar" Grid.Row="1">
+            <TextBlock x:Name="Profile_Name" Text="Иван"></TextBlock>
+        </Grid>
+        
+        <Grid x:Name="File_Table" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Row="0" Grid.Column="0" x:Name="Number">
+                <TextBlock Text="№" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock></Grid>
+            
+            <Grid Grid.Row="0" Grid.Column="1" x:Name="File_Name">
+                <TextBlock Text="Название файла" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock></Grid>
+            
+            <Grid Grid.Row="0" Grid.Column="2" x:Name="File_Read">
+                <TextBlock Text="Чтение" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock></Grid>
+            
+            <Grid Grid.Row="0" Grid.Column="3" x:Name="File_Change">
+                <TextBlock Text="Изменение" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock></Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0" x:Name="First">
+                <TextBlock Text="1" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="1" x:Name="First_Name">
+                <TextBlock Text="Название файла"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="2" x:Name="First_File_Read">
+                <Button x:Name="Read_First_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="3" x:Name="First_File_Change">
+                <Button x:Name="Change_First_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="0" x:Name="Second">
+                <TextBlock Text="2" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1" x:Name="Second_Name">
+                <TextBlock Text="Название файла"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="2" x:Name="Second_File_Read">
+                <Button x:Name="Read_Second_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="3" x:Name="Second_File_Change">
+                <Button x:Name="Change_Second_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0" x:Name="Third">
+                <TextBlock Text="3" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1" x:Name="Third_Name">
+                <TextBlock Text="Название файла"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="2" x:Name="Third_File_Read">
+                <Button x:Name="Read_Third_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="3" x:Name="Third_File_Change">
+                <Button x:Name="Change_Third_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="0" x:Name="Fourth">
+                <TextBlock Text="4" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="1" x:Name="Fourth_Name">
+                <TextBlock Text="Название файла"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="2" x:Name="Fourth_File_Read">
+                <Button x:Name="Read_Fourth_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="3" x:Name="Fourth_File_Change">
+                <Button x:Name="Change_Fourth_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="5" Grid.Column="0" x:Name="Fifth">
+                <TextBlock Text="5" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="5" Grid.Column="1" x:Name="Fifth_Name">
+                <TextBlock Text="Название файла"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="5" Grid.Column="2" x:Name="Fifth_File_Read">
+                <Button x:Name="Read_Fifth_File"></Button>
+            </Grid>
+
+            <Grid Grid.Row="5" Grid.Column="3" x:Name="Fifth_File_Change">
+                <Button x:Name="Change_Fifth_File"></Button>
+            </Grid>
+
+        </Grid>
+        
+        <Grid Grid.Row="3" x:Name="Footer">
+            <TextBlock x:Name="Footer_Text" Style="{StaticResource ResourceKey=Static_Text_Style}" Text="Все права защищены правообладателями приложения File Manager IS"></TextBlock>
+        </Grid>
+        
     </Grid>
 </Window>
