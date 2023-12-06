@@ -26,7 +26,10 @@
         </Grid>
 
         <Grid x:Name="Profile_Bar" Grid.Row="1">
-            <TextBlock x:Name="Profile_Name" Text="Иван"></TextBlock>
+            <Border Style="{StaticResource ResourceKey=Border_Name}" Margin="40,0,540,0">
+                <TextBlock x:Name="Profile_Name" Text="Иван" Style="{StaticResource ResourceKey=Profile_TextName}"></TextBlock>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0 2 0 0"></Border>
         </Grid>
         
         <Grid x:Name="File_Table" Grid.Row="2">
@@ -44,7 +47,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
+
             <Grid Grid.Row="0" Grid.Column="0" x:Name="Number">
                 <TextBlock Text="№" Style="{StaticResource ResourceKey=Static_Text_Style}" ></TextBlock></Grid>
             
@@ -62,11 +65,11 @@
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="1" x:Name="First_Name">
-                <TextBlock Text="Название файла"></TextBlock>
+                <TextBlock Text="Название файла" Style="{StaticResource ResourceKey=Static_Text_Style}"></TextBlock>
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="2" x:Name="First_File_Read">
-                <Button x:Name="Read_First_File"></Button>
+                <Button x:Name="Read_First_File" ></Button>
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="3" x:Name="First_File_Change">
@@ -78,7 +81,7 @@
             </Grid>
 
             <Grid Grid.Row="2" Grid.Column="1" x:Name="Second_Name">
-                <TextBlock Text="Название файла"></TextBlock>
+                <TextBlock Text="Название файла" Style="{StaticResource ResourceKey=Static_Text_Style}"></TextBlock>
             </Grid>
 
             <Grid Grid.Row="2" Grid.Column="2" x:Name="Second_File_Read">
@@ -94,7 +97,7 @@
             </Grid>
 
             <Grid Grid.Row="3" Grid.Column="1" x:Name="Third_Name">
-                <TextBlock Text="Название файла"></TextBlock>
+                <TextBlock Text="Название файла" Style="{StaticResource ResourceKey=Static_Text_Style}"></TextBlock>
             </Grid>
 
             <Grid Grid.Row="3" Grid.Column="2" x:Name="Third_File_Read">
@@ -110,7 +113,7 @@
             </Grid>
 
             <Grid Grid.Row="4" Grid.Column="1" x:Name="Fourth_Name">
-                <TextBlock Text="Название файла"></TextBlock>
+                <TextBlock Text="Название файла" Style="{StaticResource ResourceKey=Static_Text_Style}"></TextBlock>
             </Grid>
 
             <Grid Grid.Row="4" Grid.Column="2" x:Name="Fourth_File_Read">
@@ -126,7 +129,7 @@
             </Grid>
 
             <Grid Grid.Row="5" Grid.Column="1" x:Name="Fifth_Name">
-                <TextBlock Text="Название файла"></TextBlock>
+                <TextBlock Text="Название файла" Style="{StaticResource ResourceKey=Static_Text_Style}"></TextBlock>
             </Grid>
 
             <Grid Grid.Row="5" Grid.Column="2" x:Name="Fifth_File_Read">
@@ -136,6 +139,34 @@
             <Grid Grid.Row="5" Grid.Column="3" x:Name="Fifth_File_Change">
                 <Button x:Name="Change_Fifth_File"></Button>
             </Grid>
+
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="1"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="2"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="3"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="4"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="5"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="6"></Border>
+            
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="1"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="2"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="3"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="4"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="5"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.RowSpan="6"></Border>
+            
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="1"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="2"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="3"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="4"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="5"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Grid.RowSpan="6"></Border>
+            
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="1"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="2"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="3"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="4"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="5"></Border>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Grid.RowSpan="6"></Border>
 
         </Grid>
         
