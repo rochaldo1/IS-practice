@@ -9,7 +9,7 @@
     <Window.Resources>
         <ResourceDictionary Source="/IS_practise_7;component/View/ViewStyles/MainStyles.xaml"></ResourceDictionary>
     </Window.Resources>
-    <Grid>
+    <Grid Style="{StaticResource Grid_Background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
