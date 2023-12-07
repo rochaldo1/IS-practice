@@ -31,6 +31,11 @@ namespace IS_practise_7.View
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
 
         private void Navbar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
+        private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
 
         int CountClick = 0; //Для показа пароля!
         private void Watch_Password_MouseDown(object sender, MouseButtonEventArgs e)
@@ -52,12 +57,6 @@ namespace IS_practise_7.View
                 Form_Input_Password_TB.Visibility = Visibility.Hidden;
             }
         }
-
-        private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.WindowState=WindowState.Minimized;
-        }
-
         private void Form_Input_Password_PB_PasswordChanged(object sender, RoutedEventArgs e)
         {
             EnterVM enterViewModel = new EnterVM();

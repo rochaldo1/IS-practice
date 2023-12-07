@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IS_practise_7.ViewModel
 {
-    class ChangeFileVM
+    class ChangeFileVM : BaseVM
     {
     }
 }
