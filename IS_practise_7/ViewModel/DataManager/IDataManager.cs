@@ -15,6 +15,7 @@ namespace IS_practise_7.ViewModel.DataManager
 
         public Task SaveAllUsersAsync();
         public Task LoadAllUsersAsync();
+        //public void LoadAllUsersAsync();
 
         public bool TryAuthorization(string login, string password);
     }

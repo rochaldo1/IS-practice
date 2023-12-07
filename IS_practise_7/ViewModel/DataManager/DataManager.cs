@@ -23,11 +23,16 @@ namespace IS_practise_7.ViewModel.DataManager
             this.serializeUsers = serializeUsers;
         }
         public static DataManager Instance(SerializeUsers serializeUsers) => new(serializeUsers);
-        
+
         public async Task LoadAllUsersAsync()
         {
             await serializeUsers.LoadAsync();
         }
+
+        //public void LoadAllUsersAsync()
+        //{
+        //    serializeUsers.Load();
+        //}
 
         public async Task SaveAllUsersAsync()
         {

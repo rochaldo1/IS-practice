@@ -9,7 +9,7 @@ using System.Windows.Documents;
 
 namespace IS_practise_7.ViewModel
 {
-    internal class BaseVM : INotifyPropertyChanged
+    public class BaseVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

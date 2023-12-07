@@ -3,12 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:IS_practise_7.ViewModel"
+        xmlns:local="clr-namespace:IS_practise_7.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Height="370" Width="300" ResizeMode="NoResize" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" AutomationProperties.IsRowHeader="True" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-
-    
 
     <Window.Resources>
         <ResourceDictionary Source="/IS_practise_7;component/View/ViewStyles/EnterStyles.xaml"></ResourceDictionary>

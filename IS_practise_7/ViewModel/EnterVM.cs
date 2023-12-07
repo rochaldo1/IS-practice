@@ -13,14 +13,14 @@ using IS_practise_7.ViewModel.Commands;
 
 namespace IS_practise_7.ViewModel
 {
-    internal class EnterVM : BaseVM
+    public class EnterVM : BaseVM
     {
         string login = string.Empty;
         string password = string.Empty;
         private IDataManager dataManager;
 
         public event Action? LoginSucces;
-        public event Action<string> LoginFailed;
+        public event Action<string>? LoginFailed;
 
         public EnterVM(IDataManager dataManager)
         {

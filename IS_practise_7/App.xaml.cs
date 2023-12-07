@@ -27,8 +27,9 @@ namespace IS_practise_7
         {
             base.OnStartup(e);
             await _dataManager.LoadAllUsersAsync();
+            //_dataManager.LoadAllUsersAsync();
 
-            EnterWindow enterWindow = new(_dataManager);
+            EnterWindow enterWindow = new EnterWindow(_dataManager);
             enterWindow.Show();
         }
 

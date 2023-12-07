@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:IS_practise_7.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="ErrorWindow" Height="150" Width="300" ResizeMode="NoResize" WindowStyle="None" >
+        Title="ErrorWindow" Height="150" Width="300" ResizeMode="NoResize" WindowStyle="None">
+    
     <Window.Resources>
         <ResourceDictionary Source="/IS_practise_7;component/View/ViewStyles/ErrorStyles.xaml"></ResourceDictionary>
     </Window.Resources>

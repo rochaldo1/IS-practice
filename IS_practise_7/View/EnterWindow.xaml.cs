@@ -22,6 +22,7 @@ namespace IS_practise_7.View
     public partial class EnterWindow : Window
     {
         private IDataManager dataManager;
+        public EnterWindow() { }
         public EnterWindow(IDataManager dataManager)
         {
             InitializeComponent();

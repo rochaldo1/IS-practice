@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:IS_practise_7"
              StartupUri="/View/EnterWindow.xaml">
     <Application.Resources>
-         
+        
     </Application.Resources>
 </Application>
