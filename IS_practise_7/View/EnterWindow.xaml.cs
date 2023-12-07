@@ -1,4 +1,5 @@
 ﻿using IS_practise_7.ViewModel;
+using IS_practise_7.ViewModel.DataManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +21,18 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class EnterWindow : Window
     {
-        
-        public EnterWindow()
+        private IDataManager dataManager;
+        public EnterWindow(IDataManager dataManager)
         {
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
-           
+            DataContext = new EnterVM(this.dataManager = dataManager);
+
+            if(DataContext is EnterVM enterVM)
+            {
+                enterVM.LoginSucces += OpenMainWindow;
+                enterVM.LoginFailed += OpenErrorWindow;
+            }
         }
 
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
@@ -35,7 +42,18 @@ namespace IS_practise_7.View
         {
             this.WindowState = WindowState.Minimized;
         }
+        private void OpenMainWindow()
+        {
+            //MainWindow mainWindow = new MainWindow(DataManager dataManager);
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
 
+        private void OpenErrorWindow(string item)
+        {
+            ErrorWindow errorWindow = new ErrorWindow(item);
+            errorWindow.Show();
+        }
 
         int CountClick = 0; //Для показа пароля!
         private void Watch_Password_MouseDown(object sender, MouseButtonEventArgs e)
@@ -59,8 +77,8 @@ namespace IS_practise_7.View
         }
         private void Form_Input_Password_PB_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            EnterVM enterViewModel = new EnterVM();
-            enterViewModel.Password = Form_Input_Password_PB.Password;
+            if (DataContext is EnterVM enterViewModel)
+                enterViewModel.Password = Form_Input_Password_PB.Password;
         }
     }
 }

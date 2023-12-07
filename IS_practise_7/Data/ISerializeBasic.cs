@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using IS_practise_7.Model;
 
 
-namespace IS_practise_7.DataManager
+namespace IS_practise_7.Data
 {
     public interface ISerializeBasic<T> where T : IEntety
     {

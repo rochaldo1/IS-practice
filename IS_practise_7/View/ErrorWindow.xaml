@@ -27,7 +27,7 @@
         </Grid>
 
         <Grid  x:Name="Error_Information_Box" Grid.Row="1">
-            <TextBlock x:Name="Information" Style="{StaticResource ResourceKey=Information_Text}" Text="Error:"></TextBlock>
+            <TextBlock x:Name="Information" Style="{StaticResource ResourceKey=Information_Text}"></TextBlock>
             <Border BorderBrush="Black" BorderThickness="0 2 0 0"></Border>
         </Grid>
 

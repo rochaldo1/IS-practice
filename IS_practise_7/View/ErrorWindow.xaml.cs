@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IS_practise_7.ViewModel;
 
 namespace IS_practise_7.View
 {
@@ -19,9 +20,10 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class ErrorWindow : Window
     {
-        public ErrorWindow()
+        public ErrorWindow(string text)
         {
             InitializeComponent();
+            Information.Text = "Error: " + text;
         }
 
         private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)

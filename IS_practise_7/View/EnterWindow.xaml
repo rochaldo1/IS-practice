@@ -14,9 +14,6 @@
         <ResourceDictionary Source="/IS_practise_7;component/View/ViewStyles/EnterStyles.xaml"></ResourceDictionary>
     </Window.Resources>
     
-    <Window.DataContext>
-        <local:EnterVM></local:EnterVM>
-    </Window.DataContext>
 
     <Grid Style="{StaticResource Grid_Background}">
         <Grid.RowDefinitions>
@@ -64,10 +61,7 @@
 
         <Grid x:Name="Form_Submit" Grid.Row="3">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="Button_Submit" Style="{StaticResource Button_Submit}">
-                    <Button.DataContext>
-                        <local:EnterVM/>
-                    </Button.DataContext> Войти</Button>
+                <Button x:Name="Button_Submit" Style="{StaticResource Button_Submit}" Command="{Binding StartSignUpCommand}">Войти</Button>
             </StackPanel>
         </Grid>
     </Grid>
