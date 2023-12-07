@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Стили заднего фона-->
+    <Style x:Key="Grid_Background" TargetType="{x:Type Grid}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="White" Offset="0"></GradientStop>
+                    <GradientStop Color="LightPink" Offset="0.5"></GradientStop>
+                    <GradientStop Color="HotPink" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Стили навбара-->
+    <Style x:Key="Navbar" TargetType="Grid">
+        <Setter Property="Width" Value="300"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+    </Style>
+
+    <Style x:Key="Exit_Button" TargetType="{x:Type Path}">
+        <Setter Property="Fill" Value="Black"></Setter>
+        <Setter Property="Margin" Value="10 0 0 0"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    </Style>
+
+    <Style x:Key="RollUp_Button" TargetType="Image">
+        <Setter Property="Width" Value="25"></Setter>
+        <Setter Property="Margin" Value="230 0 0 0"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+    </Style>
+    
+    
+    <!--Cтили текста среднего-->
+    <Style x:Key="Information_Text" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    </Style>
+    
+    <!--Стили кнопки-->
+    <Style x:Key="Button_Info" TargetType="Button">
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="90"></Setter>
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="1"></Setter>
+    </Style>
+    
+</ResourceDictionary>
