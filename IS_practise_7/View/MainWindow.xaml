@@ -69,11 +69,11 @@
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="2" x:Name="First_File_Read">
-                <Button x:Name="Read_First_File" Style="{StaticResource ResourceKey=Button_Read_File}" Command="{Binding ReadFirstFileCommand}" > Прочитать </Button>
+                <Button x:Name="Read_First_File" Style="{StaticResource ResourceKey=Button_Read_File}" Command="{Binding ReadFirstFileCommand}"> Прочитать </Button>
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="3" x:Name="First_File_Change">
-                <Button x:Name="Change_First_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="" >Изменить</Button>
+                <Button x:Name="Change_First_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding ChangeFirstFileCommand}" >Изменить</Button>
             </Grid>
 
             <Grid Grid.Row="2" Grid.Column="0" x:Name="Second">
@@ -89,7 +89,7 @@
             </Grid>
 
             <Grid Grid.Row="2" Grid.Column="3" x:Name="Second_File_Change">
-                <Button x:Name="Change_Second_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="">Изменить</Button>
+                <Button x:Name="Change_Second_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding ChangeSecondFileCommand}">Изменить</Button>
             </Grid>
 
             <Grid Grid.Row="3" Grid.Column="0" x:Name="Third">
@@ -105,7 +105,7 @@
             </Grid>
 
             <Grid Grid.Row="3" Grid.Column="3" x:Name="Third_File_Change">
-                <Button x:Name="Change_Third_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="">Изменить</Button>
+                <Button x:Name="Change_Third_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding ChangeThirdFileCommand}">Изменить</Button>
             </Grid>
 
             <Grid Grid.Row="4" Grid.Column="0" x:Name="Fourth">
@@ -121,7 +121,7 @@
             </Grid>
 
             <Grid Grid.Row="4" Grid.Column="3" x:Name="Fourth_File_Change">
-                <Button x:Name="Change_Fourth_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="">Изменить</Button>
+                <Button x:Name="Change_Fourth_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding ChangeFourthFileCommand}">Изменить</Button>
             </Grid>
 
             <Grid Grid.Row="5" Grid.Column="0" x:Name="Fifth">
@@ -137,7 +137,7 @@
             </Grid>
 
             <Grid Grid.Row="5" Grid.Column="3" x:Name="Fifth_File_Change">
-                <Button x:Name="Change_Fifth_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="">Изменить</Button>
+                <Button x:Name="Change_Fifth_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding ChangeFifthFileCommand}">Изменить</Button>
             </Grid>
 
             <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="1" Grid.RowSpan="1"></Border>

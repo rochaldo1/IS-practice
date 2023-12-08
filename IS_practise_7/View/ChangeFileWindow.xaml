@@ -29,7 +29,7 @@
         </Grid>
 
         <Grid x:Name="Footer" Grid.Row="2">
-            <Button x:Name="Button_Change_File" Style="{StaticResource ResourceKey=Button_Change_File}">Cохранить</Button>
+            <Button x:Name="Button_Change_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding SaveFile}">Cохранить</Button>
         </Grid>
     </Grid>
 </Window>

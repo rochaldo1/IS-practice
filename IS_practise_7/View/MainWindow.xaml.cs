@@ -30,6 +30,7 @@ namespace IS_practise_7.View
 
             if(DataContext is MainVM mainVM){
                 mainVM.FileReader += OpenReadFileWindow;
+                mainVM.FileSaver += OpenChangeReadFileWindow;
             }
         }
 
@@ -37,6 +38,12 @@ namespace IS_practise_7.View
         {
             ReadFileWindow readFileWindow = new ReadFileWindow(text);
             readFileWindow.Show();
+        }
+
+        private void OpenChangeReadFileWindow(string path, string text)
+        {
+            ChangeFileWindow changeFileWindow = new ChangeFileWindow(path,text);
+            changeFileWindow.Show();
         }
 
         private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)

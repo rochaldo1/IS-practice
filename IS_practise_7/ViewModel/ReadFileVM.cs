@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IS_practise_7.ViewModel.DataManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace IS_practise_7.ViewModel
 {
     class ReadFileVM : BaseVM
     {
+        
     }
 }

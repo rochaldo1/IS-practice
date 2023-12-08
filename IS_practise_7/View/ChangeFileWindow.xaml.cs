@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IS_practise_7.ViewModel;
 
 namespace IS_practise_7.View
 {
@@ -19,10 +21,16 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class ChangeFileWindow : Window
     {
-        public ChangeFileWindow()
+        public ChangeFileWindow(string path, string text)
         {
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
+            DataContext = new ChangeFileVM(path, text);
+            InformationFile.Text = text;
+            if(DataContext is ChangeFileVM changeFileVM)
+            {
+                
+            }
         }
 
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
