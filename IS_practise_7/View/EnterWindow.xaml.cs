@@ -22,7 +22,7 @@ namespace IS_practise_7.View
     public partial class EnterWindow : Window
     {
         private IDataManager dataManager;
-        public EnterWindow() { }
+        
         public EnterWindow(IDataManager dataManager)
         {
             InitializeComponent();
@@ -36,6 +36,8 @@ namespace IS_practise_7.View
             }
         }
 
+        public EnterWindow() { }
+
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
 
         private void Navbar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
@@ -45,8 +47,8 @@ namespace IS_practise_7.View
         }
         private void OpenMainWindow()
         {
-            //MainWindow mainWindow = new MainWindow(DataManager dataManager);
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(dataManager);
+            //MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }

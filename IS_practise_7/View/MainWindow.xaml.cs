@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IS_practise_7.ViewModel;
+using IS_practise_7.ViewModel.DataManager;
 
 namespace IS_practise_7.View
 {
@@ -19,10 +21,21 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private IDataManager dataManager;
+        public MainWindow(IDataManager dataManager)
         {
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
+            DataContext = new MainVM(this.dataManager = dataManager);
+            if(DataContext is MainVM mainVM){
+                mainVM.FileReader += OpenReadFileWindow;
+            }
+        }
+
+        private void OpenReadFileWindow(string filePath, string text)
+        {
+            ReadFileWindow readFileWindow = new ReadFileWindow();
+            readFileWindow.Show();
         }
 
         private void RollUp_MouseDown(object sender, MouseButtonEventArgs e)
