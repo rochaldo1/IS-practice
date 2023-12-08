@@ -48,6 +48,7 @@ namespace IS_practise_7.View
             //MainWindow mainWindow = new MainWindow(DataManager dataManager);
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            this.Close();
         }
 
         private void OpenErrorWindow(string item)

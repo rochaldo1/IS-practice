@@ -33,7 +33,8 @@
         </Grid>
 
         <Grid x:Name="Button_Submit" Grid.Row="2">
-            <Button x:Name="Submit_Info" Style="{StaticResource ResourceKey=Button_Info}">OK</Button>
+            <Border BorderBrush="Black" BorderThickness="0 2 0 0"></Border>
+            <TextBlock x:Name="Text_For_Exit" Style="{StaticResource ResourceKey=For_Exit}" Text="Для выхода нажмите на крестик!"></TextBlock>
         </Grid>
     </Grid>
 </Window>

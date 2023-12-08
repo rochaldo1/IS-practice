@@ -31,5 +31,6 @@ namespace IS_practise_7.View
             this.WindowState = WindowState.Minimized;
         }
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
+
     }
 }
