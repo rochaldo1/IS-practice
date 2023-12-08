@@ -1,10 +1,5 @@
 ﻿using IS_practise_7.ViewModel.Commands;
 using IS_practise_7.ViewModel.DataManager;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace IS_practise_7.ViewModel

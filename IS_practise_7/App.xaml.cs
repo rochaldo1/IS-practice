@@ -1,9 +1,7 @@
 ﻿using IS_practise_7.Data.Users;
 using System.Configuration;
-using System.Data;
 using System.Windows;
 using IS_practise_7.ViewModel.DataManager;
-
 using IS_practise_7.View;
 
 namespace IS_practise_7

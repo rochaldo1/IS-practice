@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace IS_practise_7.Model.Possibilities
 {
@@ -20,8 +15,5 @@ namespace IS_practise_7.Model.Possibilities
             if (string.IsNullOrEmpty(text)) return "Пусто!";
             return text;
         }
-        //public async Task ReadTextFileAsync() { return await Task.Run(ReadFile(string path); }
-
-
     }
 }

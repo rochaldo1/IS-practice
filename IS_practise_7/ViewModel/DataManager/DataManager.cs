@@ -1,11 +1,7 @@
 ﻿using IS_practise_7.Data.Users;
 using IS_practise_7.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace IS_practise_7.ViewModel.DataManager
 {
@@ -28,11 +24,6 @@ namespace IS_practise_7.ViewModel.DataManager
         {
             await serializeUsers.LoadAsync();
         }
-
-        //public void LoadAllUsersAsync()
-        //{
-        //    serializeUsers.Load();
-        //}
 
         public async Task SaveAllUsersAsync()
         {

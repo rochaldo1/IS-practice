@@ -1,10 +1,4 @@
 ﻿using IS_practise_7.Model.Possibilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using IS_practise_7.Model.ForFabrics;
 
 namespace IS_practise_7.Model.Fabric
@@ -18,7 +12,6 @@ namespace IS_practise_7.Model.Fabric
             _readTextFile = readTextFile;
             _changeFile = changeFile;
         }
-
         public override IChooseRole GetRole()
         {
             Manager member = new (_readTextFile, _changeFile);

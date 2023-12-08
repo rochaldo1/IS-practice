@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IS_practise_7.Data;
-using IS_practise_7.Model;
+﻿using IS_practise_7.Model;
 using System.Text.Json;
-using System.Collections;
 using System.IO;
-using System.Globalization;
-using System.Reflection.Metadata.Ecma335;
 
 namespace IS_practise_7.Data.Users
 {

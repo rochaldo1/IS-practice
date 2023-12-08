@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace IS_practise_7.ViewModel.Commands
 {
@@ -19,24 +14,9 @@ namespace IS_practise_7.ViewModel.Commands
         {
             return true;
         }
-
         public void Execute(object? parameter)
         {
             action();
         }
-
-
-        //private Command(EventHandler? eventHandler) => CanExecuteChanged += eventHandler;
-
-        //public static Command CreateEvent(EventHandler? eventHandler) => new(eventHandler);
-        //public bool CanExecute(object? parameter)
-        //{
-        //    return CanExecute == null || CanExecute(parameter);
-        //}
-
-        //public void Execute(object? parameter)
-        //{
-        //    Execute(parameter);
-        //}
     }
 }
