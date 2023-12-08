@@ -27,14 +27,15 @@ namespace IS_practise_7.View
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
             DataContext = new MainVM(this.dataManager = dataManager);
+
             if(DataContext is MainVM mainVM){
                 mainVM.FileReader += OpenReadFileWindow;
             }
         }
 
-        private void OpenReadFileWindow(string filePath, string text)
+        private void OpenReadFileWindow(string text)
         {
-            ReadFileWindow readFileWindow = new ReadFileWindow();
+            ReadFileWindow readFileWindow = new ReadFileWindow(text);
             readFileWindow.Show();
         }
 

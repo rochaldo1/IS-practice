@@ -9,12 +9,13 @@ using System.Windows.Input;
 
 namespace IS_practise_7.ViewModel
 {
-    internal class MainVM : BaseVM
+    public class MainVM : BaseVM
     {
         private string name = string.Empty;
+        
         private IDataManager dataManager;
 
-        public event Action<string, string> FileReader;
+        public event Action<string>? FileReader;
         public MainVM(IDataManager dataManager)
         {
             this.dataManager = dataManager;
@@ -29,7 +30,24 @@ namespace IS_practise_7.ViewModel
 
         private void Read_First_File()
         {
-            FileReader.Invoke(dataManager._concreteUser.RoutesToRead[0], dataManager._concreteUser.ReadFile(dataManager._concreteUser.RoutesToRead[0]));
+            FileReader.Invoke(dataManager._concreteUser.ReadFile(dataManager._concreteUser.RoutesToRead[0]));
+        }
+
+        private void Read_Second_File()
+        {
+            FileReader.Invoke(dataManager._concreteUser.ReadFile(dataManager._concreteUser.RoutesToRead[1]));
+        }
+        private void Read_Third_File()
+        {
+            FileReader.Invoke(dataManager._concreteUser.ReadFile(dataManager._concreteUser.RoutesToRead[2]));
+        }
+        private void Read_Fourth_File()
+        {
+            FileReader.Invoke(dataManager._concreteUser.ReadFile(dataManager._concreteUser.RoutesToRead[3]));
+        }
+        private void Read_Fifth_File()
+        {
+            FileReader.Invoke(dataManager._concreteUser.ReadFile(dataManager._concreteUser.RoutesToRead[4]));
         }
         public ICommand ReadFirstFileCommand
         {
@@ -38,6 +56,50 @@ namespace IS_practise_7.ViewModel
                 return new Command(() =>
                 {
                     Read_First_File();
+                });
+            }
+        }
+
+        public ICommand ReadSecondFileCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Read_Second_File();
+                });
+            }
+        }
+
+        public ICommand ReadThirdFileCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Read_Third_File();
+                });
+            }
+        }
+
+        public ICommand ReadFourthFileCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Read_Fourth_File();
+                });
+            }
+        }
+
+        public ICommand ReadFifthFileCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Read_Fifth_File();
                 });
             }
         }

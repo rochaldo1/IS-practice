@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IS_practise_7.ViewModel.DataManager;
 
 namespace IS_practise_7.View
 {
@@ -19,10 +20,11 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class ReadFileWindow : Window
     {
-        public ReadFileWindow()
+        public ReadFileWindow(string text)
         {
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
+            InformationFile.Text = text;
         }
 
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();
