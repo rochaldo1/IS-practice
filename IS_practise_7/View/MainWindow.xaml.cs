@@ -42,7 +42,7 @@ namespace IS_practise_7.View
 
         private void OpenChangeReadFileWindow(string path, string text)
         {
-            ChangeFileWindow changeFileWindow = new ChangeFileWindow(path,text);
+            ChangeFileWindow changeFileWindow = new ChangeFileWindow(dataManager,path,text);;
             changeFileWindow.Show();
         }
 

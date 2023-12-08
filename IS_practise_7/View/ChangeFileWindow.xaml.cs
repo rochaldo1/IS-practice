@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using IS_practise_7.ViewModel;
+using IS_practise_7.ViewModel.DataManager;
 
 namespace IS_practise_7.View
 {
@@ -21,16 +22,13 @@ namespace IS_practise_7.View
     /// </summary>
     public partial class ChangeFileWindow : Window
     {
-        public ChangeFileWindow(string path, string text)
+        private IDataManager dataManager;
+        public ChangeFileWindow(IDataManager dataManager,string path, string text)
         {
             InitializeComponent();
             MouseLeftButtonDown += Navbar_MouseLeftButtonDown;
-            DataContext = new ChangeFileVM(path, text);
+            DataContext = new ChangeFileVM(this.dataManager = dataManager, path, text);
             InformationFile.Text = text;
-            if(DataContext is ChangeFileVM changeFileVM)
-            {
-                
-            }
         }
 
         private void Exit_MouseDown(object sender, MouseButtonEventArgs e) => this.Close();

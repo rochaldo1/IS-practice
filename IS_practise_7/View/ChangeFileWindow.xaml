@@ -25,11 +25,11 @@
         </Grid>
 
         <Grid x:Name="File_Info" Grid.Row="1">
-            <TextBox x:Name="InformationFile"></TextBox>
+            <TextBox x:Name="InformationFile" Text="{Binding Text}"></TextBox>
         </Grid>
 
         <Grid x:Name="Footer" Grid.Row="2">
-            <Button x:Name="Button_Change_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding SaveFile}">Cохранить</Button>
+            <Button x:Name="Button_Change_File" Style="{StaticResource ResourceKey=Button_Change_File}" Command="{Binding SaveThisFile}">Cохранить</Button>
         </Grid>
     </Grid>
 </Window>
